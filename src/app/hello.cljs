@@ -1,6 +1,6 @@
 (ns app.hello
   (:require [reagent.core :as r]
-            ["react-data-grid" :refer [ReactDataGrid]]))
+            ["react-data-grid" :default DataGrid]))
 
 (defn click-counter [click-count]
   [:div
@@ -12,5 +12,5 @@
 (def click-count (r/atom 0))
 
 (defn hello []
-  [(r/adapt-react-class  ReactDataGrid)
+  [:> DataGrid
    {:columns [{:key 0 :name "test"}] :rows [{:id 1 :title "two"}]} ""])
