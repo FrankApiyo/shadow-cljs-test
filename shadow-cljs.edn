@@ -14,8 +14,9 @@
   :e2e {:ns-regexp "e2e.*"
         :output-to "out/e2e.js"
         :target :node-test}}
- :dependencies [[reagent "0.8.1"]
-                [devcards "0.2.6"]]
+ :dependencies [[reagent "1.0.0"]
+                [reagent-utils "0.3.3"]
+                [re-frame "1.2.0"] [devcards "0.2.6"]]
  :dev-http {3000 "public"}
  :nrepl {:port 3333}
  :source-paths ["src"]}
